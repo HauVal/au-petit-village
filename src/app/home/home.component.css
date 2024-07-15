@@ -1,3 +1,10 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+
+
+
 h1 {
     font-family: "Bubbleboddy-neue", sans-serif;
     color: #DA001E;
