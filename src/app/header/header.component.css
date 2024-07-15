@@ -1,0 +1,25 @@
+nav {
+    font-family: "Comfortaa", sans serif;
+    background-color: #FDD90B;
+    border-bottom-style: solid;
+    border-color: #DA001E;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+nav a {
+    margin: 10px 10px;
+    text-decoration: none;
+    color: #151217;
+    text-align: center;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+nav img {
+    width: 90px;
+    height: 90px;
+}
