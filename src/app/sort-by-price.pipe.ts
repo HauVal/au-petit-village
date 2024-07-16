@@ -6,12 +6,20 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SortByPricePipe implements PipeTransform {
 
-  transform(products: []): any [] {
-    return products.sort((a:any,b:any) => {
-      if(a.price < b.price) { return -1;}
-      else if(a.price > b.price) { return 1;}
-      else return 0
-    });
-  }
+  transform(products: any[], sortBy: string, sortOrder: string): any[] {
+    if (!products || !sortBy || !sortOrder) {
+      return products;
+    }
 
+    const sortedProducts = [...products].sort((a, b) => {
+      if (a[sortBy] < b[sortBy]) {
+        return sortOrder === 'asc' ? -1 : 1;
+      } else if (a[sortBy] > b[sortBy]) {
+        return sortOrder === 'asc' ? 1 : -1;
+      }
+      return 0;
+    });
+
+    return sortedProducts;
+  }
 }

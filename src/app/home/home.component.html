@@ -17,9 +17,19 @@
 
 <section class="figurines">
     <h2>Nos Figurines</h2>
-    <app-search-bar></app-search-bar>
+
+    <app-search-bar (searchTermChanged)="onSearchTermChanged($event)"></app-search-bar>
+
+    <div id="sortPrice">
+      <label for="sortOrder">Trier par prix : </label>
+      <select id="sortOrder" [(ngModel)]="sortOrder" (ngModelChange)="onSortOrderChanged($event)">
+        <option value="asc">Croissant</option>
+        <option value="desc">Décroissant</option>
+      </select>
+    </div>
+
     <div id="product-list">
-      <div *ngIf="products.length">
+      <div *ngIf="products | filterByName:searchTerm as filteredProducts">
           <div *ngFor="let product of products" class="figurine">
             <h3>{{ product.name }}</h3>
             <p>Prix: {{ product.price }} €</p>
