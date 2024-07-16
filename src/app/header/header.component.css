@@ -1,6 +1,6 @@
 nav {
     font-family: "Comfortaa", sans serif;
-    background-color: #FDD90B;
+    background-color: #151217;
     border-bottom-style: solid;
     border-color: #DA001E;
     display: flex;
@@ -12,7 +12,7 @@ nav {
 nav a {
     margin: 10px 10px;
     text-decoration: none;
-    color: #151217;
+    color: #F9D0A3;
     text-align: center;
     &:hover {
         text-decoration: underline;
