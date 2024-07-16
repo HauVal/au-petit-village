@@ -1,15 +1,34 @@
-<section class="presentation">
-  <img src="idefix-main.webp" alt="Figurine d'Idefix dans une main" />
 
-  <article>
-    <h1>{{ title }}</h1>
-    <p>
-      Au Petit Village est une entreprise qui confectionne et vend des figurines
-      faites mains inspirées de la bande dessinée Astérix et Obélix.
-    </p>
-  </article>
-</section>
+<div class="titlePresentation">
+  <h1>{{ title }}</h1>
+  
+  <section class="presentation">
+    <img src="idefix-main.webp" alt="Figurine d'Idefix dans une main" />
+  
+    <article>
+      <p>
+        Au Petit Village est une entreprise qui confectionne et vend des figurines
+        faites mains inspirées de la bande dessinée Astérix et Obélix.
+      </p>
+    </article>
+  </section>
+</div>
 
-<section>
-    <h2>Nos Produits</h2>
+
+<section class="figurines">
+    <h2>Nos Figurines</h2>
+    <app-search-bar></app-search-bar>
+    <div id="product-list">
+      <div *ngIf="products.length">
+          <div *ngFor="let product of products" class="figurine">
+            <h3>{{ product.name }}</h3>
+            <p>Prix: {{ product.price }} €</p>
+            <img [src]="product.imageUrl" alt="{{ product.name }}" width="100">
+          </div>
+      </div>
+      <div *ngIf="!products.length">
+        <p>Aucun produit disponible.</p>
+      </div>
+    </div>
+    
 </section>

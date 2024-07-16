@@ -1,0 +1,28 @@
+
+p {
+    font-family: "Comfortaa", sans serif;
+    text-align: center;
+}
+
+#product{
+    display: block;
+    width: 250px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #151217;
+}
+
+#inside {
+    padding: 5px;
+}
+
+figure#art {
+    margin: 0;
+    padding: 5px 5px 0 5px;
+    width: calc(100% - 10px);
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

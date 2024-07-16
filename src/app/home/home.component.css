@@ -1,5 +1,11 @@
+.titlePresentation {
+    background-color: #F9D0A3;
+    padding-top: 10px;
+}
+
 .presentation {
-    background-color: #FDD90B;
+    background-color: #F9D0A3;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,9 +22,27 @@ h1, h2 {
     justify-content: center;
 }
 
+h3 {
+    font-family: "Bubbleboddy-neue", sans-serif;
+}
+
 p {
     font-family: "Comfortaa", sans serif;
     text-align: center;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.figurine {
+    text-align: center;
+    border-style: solid;
+    border-color: #151217;
+    margin: 20px;
 }
 
 /*Tablette en mode portrait et petite tablette*/
