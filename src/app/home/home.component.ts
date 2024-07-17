@@ -10,18 +10,24 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, ProductComponent, SearchBarComponent, CommonModule,SortByPricePipe, FilterByNamePipe],
+  imports: [
+    FormsModule,
+    ProductComponent,
+    SearchBarComponent,
+    CommonModule,
+    SortByPricePipe,
+    FilterByNamePipe,
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-export class HomeComponent  implements OnInit{
-
-  title = "Au Petit Village"
+export class HomeComponent implements OnInit {
+  title = 'Au Petit Village';
 
   products: any[] = [];
   searchTerm: string = '';
   sortBy: string = 'price';
-  sortOrder: string = 'asc';
+  sortOrder: string = 'none';
 
   constructor(private productsService: ProductsService) {}
 

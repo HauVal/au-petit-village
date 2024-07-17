@@ -1,44 +1,55 @@
-
 <div class="titlePresentation">
   <h1>{{ title }}</h1>
-  
+
   <section class="presentation">
     <img src="idefix-main.webp" alt="Figurine d'Idefix dans une main" />
-  
+
     <article>
       <p>
-        Au Petit Village est une entreprise qui confectionne et vend des figurines
-        faites mains inspirées de la bande dessinée Astérix et Obélix.
+        Au Petit Village est une entreprise qui confectionne et vend des
+        figurines faites mains inspirées de la bande dessinée Astérix et Obélix.
       </p>
     </article>
   </section>
 </div>
 
-
 <section class="figurines">
-    <h2>Nos Figurines</h2>
+  <h2>Nos Figurines</h2>
 
-    <app-search-bar (searchTermChanged)="onSearchTermChanged($event)"></app-search-bar>
+  <app-search-bar
+    (searchTermChanged)="onSearchTermChanged($event)"
+  ></app-search-bar>
 
-    <div id="sortPrice">
-      <label for="sortOrder">Trier par prix : </label>
-      <select id="sortOrder" [(ngModel)]="sortOrder" (ngModelChange)="onSortOrderChanged($event)">
-        <option value="asc">Croissant</option>
-        <option value="desc">Décroissant</option>
-      </select>
-    </div>
+  <div id="sortPrice">
+    <label for="sortOrder">Trier par prix : </label>
+    <select
+      id="sortOrder"
+      [(ngModel)]="sortOrder"
+      (ngModelChange)="onSortOrderChanged($event)"
+    >
+      <option value="none">prix</option>
+      <option value="asc">Croissant</option>
+      <option value="desc">Décroissant</option>
+    </select>
+  </div>
 
-    <div id="product-list">
-      <div *ngIf="products | filterByName:searchTerm as filteredProducts">
-          <div *ngFor="let product of products" class="figurine">
-            <h3>{{ product.name }}</h3>
-            <p>Prix: {{ product.price }} €</p>
-            <img [src]="product.imageUrl" alt="{{ product.name }}" width="100">
-          </div>
+  <div id="product-list">
+    <div *ngIf="products | filterByName : searchTerm as filteredProducts">
+      <div *ngIf="filteredProducts.length > 0; else noProducts">
+        <div
+          *ngFor="
+            let product of filteredProducts | sortByPrice : 'price' : sortOrder
+          "
+          class="figurine"
+        >
+          <h3>{{ product.name }}</h3>
+          <p>Prix: {{ product.price }} €</p>
+          <img [src]="product.imageUrl" alt="{{ product.name }}" width="100" />
+        </div>
       </div>
-      <div *ngIf="!products.length">
-        <p>Aucun produit disponible.</p>
-      </div>
     </div>
-    
+    <ng-template #noProducts>
+      <p>Aucun produit disponible.</p>
+    </ng-template>
+  </div>
 </section>
