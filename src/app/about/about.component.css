@@ -1,20 +1,3 @@
-div {
-    display: flex;
-    justify-content: center;
-}
-
-h1 {
-    font-family: "Bubbleboddy-neue", sans-serif;
-    color: #DA001E;
-    display: flex;
-    justify-content: center;
-}
-
-h2 {
-    font-family: "Bubbleboddy-neue", sans-serif;
-    color: #151217;
-}
-
 section {
     text-align: center;
     display: flex;
@@ -22,19 +5,25 @@ section {
     align-items: center;
 }
 
-section img {
+img {
     width: 30em;
     margin: 20px;
+}
+
+h1 {
+    font-family: "Bubbleboddy-neue", sans-serif;
+    color: #DA001E;
 }
 
 p {
     font-family: "Comfortaa", sans serif;
     margin: 20px;
+    color: #151217
 }
 
 /*smartphone uniquement*/
 @media screen and (max-width: 768px) {
-    img, section img {
+    img {
         width: 20em;
     }
 

@@ -1,0 +1,34 @@
+.product {
+    background-color: #FDD90B;
+    display: flex;
+    justify-content: space-evenly
+}
+
+h2 {
+    font-family: "Bubbleboddy-neue", sans-serif;
+}
+
+p {
+    font-family: "Comfortaa", sans serif;
+    text-align: center;
+}
+
+.details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img {
+    width: 500px;
+}
+
+/*Tablette en mode portrait et écran plus petit*/
+@media screen and (max-width : 900px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,6 +1,70 @@
-h1 {
+.titlePresentation {
+    background-color: #F9D0A3;
+    padding-top: 10px;
+}
+
+.presentation {
+    background-color: #F9D0A3;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    margin: 100px;
+}
+
+h1, h2 {
     font-family: "Bubbleboddy-neue", sans-serif;
     color: #DA001E;
     display: flex;
     justify-content: center;
+}
+
+h3 {
+    font-family: "Bubbleboddy-neue", sans-serif;
+}
+
+p {
+    font-family: "Comfortaa", sans serif;
+    text-align: center;
+}
+#sortPrice {
+    text-align: center;
+}
+
+#product-list {
+    display: flex;
+    justify-content: center;
+}
+
+.figurine {
+    text-align: center;
+    border-style: solid;
+    border-color: #151217;
+    margin: 20px;
+}
+
+#product-list img {
+    width: 100px;
+}
+
+label, select {
+    font-family: "Comfortaa", sans serif;
+}
+
+/*Tablette en mode portrait et petite tablette*/
+@media screen and (max-width : 900px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*Smartphone uniquement*/
+@media screen and (max-width : 719px) {
+    img {
+        width: 400px;
+    }
 }
