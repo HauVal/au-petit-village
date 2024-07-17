@@ -1,15 +1,9 @@
-<div *ngIf="products.length">
-    <h1>Liste des produits</h1>
-    <ul>
-      <li *ngFor="let product of products">
+<div *ngIf="product" class="product">
+    <img [src]="product.imageUrl" alt="{{ product.name }}">
+    <div class="details">
         <h2>{{ product.name }}</h2>
+    
         <p>{{ product.description }}</p>
         <p>Prix: {{ product.price }} €</p>
-        <img [src]="product.imageUrl" alt="{{ product.name }}" width="100">
-      </li>
-    </ul>
+    </div>
   </div>
-  <div *ngIf="!products.length">
-    <p>Aucun produit disponible.</p>
-  </div>
-

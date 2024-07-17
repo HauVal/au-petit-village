@@ -30,12 +30,13 @@ p {
     font-family: "Comfortaa", sans serif;
     text-align: center;
 }
+#sortPrice {
+    text-align: center;
+}
 
 #product-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .figurine {
@@ -43,6 +44,10 @@ p {
     border-style: solid;
     border-color: #151217;
     margin: 20px;
+}
+
+#product-list img {
+    width: 100px;
 }
 
 label, select {

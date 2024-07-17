@@ -6,8 +6,7 @@
 
     <article>
       <p>
-        Au Petit Village est une entreprise qui confectionne et vend des
-        figurines faites mains inspirées de la bande dessinée Astérix et Obélix.
+       {{about}}
       </p>
     </article>
   </section>
@@ -42,9 +41,9 @@
           "
           class="figurine"
         >
-          <h3>{{ product.name }}</h3>
+          <h3><a [routerLink]="['/product', product.id]">{{ product.name }}</a></h3>
           <p>Prix: {{ product.price }} €</p>
-          <img [src]="product.imageUrl" alt="{{ product.name }}" width="100" />
+          <img [src]="product.imageUrl" alt="{{ product.name }}" />
         </div>
       </div>
     </div>

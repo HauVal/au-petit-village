@@ -1,28 +1,34 @@
+.product {
+    background-color: #FDD90B;
+    display: flex;
+    justify-content: space-evenly
+}
+
+h2 {
+    font-family: "Bubbleboddy-neue", sans-serif;
+}
 
 p {
     font-family: "Comfortaa", sans serif;
     text-align: center;
 }
 
-#product{
-    display: block;
-    width: 250px;
-    padding: 10px;
-    border-style: solid;
-    border-color: #151217;
+.details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#inside {
-    padding: 5px;
+img {
+    width: 500px;
 }
 
-figure#art {
-    margin: 0;
-    padding: 5px 5px 0 5px;
-    width: calc(100% - 10px);
-
-    img {
-        width: 100%;
-        object-fit: cover;
+/*Tablette en mode portrait et écran plus petit*/
+@media screen and (max-width : 900px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
